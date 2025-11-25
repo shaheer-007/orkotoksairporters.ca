@@ -17,7 +17,8 @@
                     <p class="main-slider__sub-title-two">Experience</p>
                     <div class="main-slider__btn-and-video-box">
                         <div class="main-slider__btn-box gap-3">
-                            <a href="{{ route('book') }}" class="thm-btn">Book Online<span class="fas fa-arrow-right"></span></a>
+                            <a href="{{ route('book') }}" class="thm-btn">Book Online<span
+                                    class="fas fa-arrow-right"></span></a>
                             <a href="tel:{{ env('call') }}" class="slider-num">{{ env('Number') }}</a>
                         </div>
                     </div>
@@ -37,7 +38,8 @@
                     <p class="main-slider__sub-title-two">Experience</p>
                     <div class="main-slider__btn-and-video-box">
                         <div class="main-slider__btn-box">
-                            <a href="{{ route('book') }}" class="thm-btn">Book Online<span class="fas fa-arrow-right"></span></a>
+                            <a href="{{ route('book') }}" class="thm-btn">Book Online<span
+                                    class="fas fa-arrow-right"></span></a>
                             <a href="tel:{{ env('call') }}" class="slider-num">{{ env('Number') }}</a>
                         </div>
                     </div>
@@ -57,7 +59,8 @@
                     <p class="main-slider__sub-title-two">Experience</p>
                     <div class="main-slider__btn-and-video-box">
                         <div class="main-slider__btn-box">
-                            <a href="{{ route('book') }}" class="thm-btn">Book Online<span class="fas fa-arrow-right"></span></a>
+                            <a href="{{ route('book') }}" class="thm-btn">Book Online<span
+                                    class="fas fa-arrow-right"></span></a>
                             <a href="tel:{{ env('call') }}" class="slider-num">{{ env('Number') }}</a>
                         </div>
                     </div>
@@ -264,15 +267,17 @@
                             <a href="{{ route('about') }}" class="about-one__btn thm-btn">Learn More<span
                                     class="fas fa-arrow-right"></span></a>
                         </div>
-                        <div class="about-one__call-box">
-                            <div class="about-one__call-box-icon">
-                                <span class="icon-call-2"></span>
+                        <a href="tel:{{ env('Call') }}">
+                            <div class="about-one__call-box">
+                                <div class="about-one__call-box-icon">
+                                    <span class="icon-call-2"></span>
+                                </div>
+                                <div class="about-one__call-box-content">
+                                    <p>Call to Anytime</p>
+                                    <h4><a href="tel:{{ env('Call') }}">{{ env('Number') }}</a></h4>
+                                </div>
                             </div>
-                            <div class="about-one__call-box-content">
-                                <p>Call to Anytime</p>
-                                <h4><a href="tel:{{ env('Call') }}">{{ env('Number') }}</a></h4>
-                            </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -345,15 +350,15 @@
                         </p>
                     </div>
                     <div class="why-choose-one__btn-box">
-                        <a href="#" class="thm-btn">Book Online<span
-                                class="fas fa-arrow-right"></span></a>
+                        <a href="#" class="thm-btn">Book Online<span class="fas fa-arrow-right"></span></a>
                     </div>
                 </div>
             </div>
             <!-- Why Choose One Single End -->
         </div>
         <div class="d-flex justify-content-center mt-3">
-            <a href="{{ route('services') }}" class="thm-btn">View More Services<span class="fas fa-arrow-right"></span></a>
+            <a href="{{ route('services') }}" class="thm-btn">View More Services<span
+                    class="fas fa-arrow-right"></span></a>
         </div>
     </div>
 </section>
@@ -379,7 +384,8 @@
                             <p class="testimonial-one__sub-title">Customer</p>
                         </div>
                     </div>
-                    <p class="testimonial-one__text">Excellent service every time. The driver arrived early, helped with my luggage, and the ride to Calgary Airport was smooth and stress-free.</p>
+                    <p class="testimonial-one__text">Excellent service every time. The driver arrived early, helped with
+                        my luggage, and the ride to Calgary Airport was smooth and stress-free.</p>
                     <div class="testimonial-one__rating">
                         <span class="icon-star"></span>
                         <span class="icon-star"></span>
@@ -403,7 +409,8 @@
                             <p class="testimonial-one__sub-title">Customer</p>
                         </div>
                     </div>
-                    <p class="testimonial-one__text">Reliable and friendly. I use them for all my trips between Okotoks and High River, and they’ve never once been late.</p>
+                    <p class="testimonial-one__text">Reliable and friendly. I use them for all my trips between Okotoks
+                        and High River, and they’ve never once been late.</p>
                     <div class="testimonial-one__rating">
                         <span class="icon-star"></span>
                         <span class="icon-star"></span>
@@ -427,7 +434,8 @@
                             <p class="testimonial-one__sub-title">Customer</p>
                         </div>
                     </div>
-                    <p class="testimonial-one__text">Great experience from start to finish. Clean car, professional driver, and very comfortable ride. Highly recommended.</p>
+                    <p class="testimonial-one__text">Great experience from start to finish. Clean car, professional
+                        driver, and very comfortable ride. Highly recommended.</p>
                     <div class="testimonial-one__rating">
                         <span class="icon-star"></span>
                         <span class="icon-star"></span>
@@ -451,7 +459,8 @@
                             <p class="testimonial-one__sub-title">Customer</p>
                         </div>
                     </div>
-                    <p class="testimonial-one__text">Booked an early morning airport ride and everything went perfectly. On time, polite, and very convenient. Will definitely use again.</p>
+                    <p class="testimonial-one__text">Booked an early morning airport ride and everything went perfectly.
+                        On time, polite, and very convenient. Will definitely use again.</p>
                     <div class="testimonial-one__rating">
                         <span class="icon-star"></span>
                         <span class="icon-star"></span>
@@ -475,7 +484,8 @@
                             <p class="testimonial-one__sub-title">Customer</p>
                         </div>
                     </div>
-                    <p class="testimonial-one__text">Fantastic local taxi service. They always show up quickly and make traveling around Diamond Valley and surrounding areas so easy.</p>
+                    <p class="testimonial-one__text">Fantastic local taxi service. They always show up quickly and make
+                        traveling around Diamond Valley and surrounding areas so easy.</p>
                     <div class="testimonial-one__rating">
                         <span class="icon-star"></span>
                         <span class="icon-star"></span>

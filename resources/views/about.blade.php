@@ -102,15 +102,17 @@
                             <a href="{{ route('book') }}" class="about-one__btn thm-btn">Book Online<span
                                     class="fas fa-arrow-right"></span></a>
                         </div>
-                        <div class="about-one__call-box">
-                            <div class="about-one__call-box-icon">
-                                <span class="icon-call-2"></span>
+                        <a href="tel:{{ env('Call') }}">
+                            <div class="about-one__call-box">
+                                <div class="about-one__call-box-icon">
+                                    <span class="icon-call-2"></span>
+                                </div>
+                                <div class="about-one__call-box-content">
+                                    <p>Call to Anytime</p>
+                                    <h4><a href="tel:{{ env('Call') }}">{{ env('Number') }}</a></h4>
+                                </div>
                             </div>
-                            <div class="about-one__call-box-content">
-                                <p>Call to Anytime</p>
-                                <h4><a href="tel:{{ env('Call') }}">{{ env('Number') }}</a></h4>
-                            </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -158,9 +160,9 @@
                                         class="odometer-digit-inner"><span class="odometer-ribbon"><span
                                                 class="odometer-ribbon-inner"><span
                                                     class="odometer-value">0</span></span></span></span></span><span
-                                        class="odometer-digit-inner"><span class="odometer-ribbon"><span
-                                                class="odometer-ribbon-inner"><span
-                                                    class="odometer-value">0</span></span></span></span></span></div>
+                                    class="odometer-digit-inner"><span class="odometer-ribbon"><span
+                                            class="odometer-ribbon-inner"><span
+                                                class="odometer-value">0</span></span></span></span></span></div>
                         </h3>
                         <span>+</span>
                     </div>
