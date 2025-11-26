@@ -26,7 +26,8 @@
     <div class="container">
         <div class="search-car__inner">
             <div class="search-car__form-box">
-                <form class="contact-form-validated search-car__form" action="" method="post" novalidate="novalidate">
+                <form class="contact-form-validated search-car__form" action="{{ route('booking.submit') }}"
+                    method="post">
                     @csrf
 
                     <div class="row">
@@ -38,7 +39,8 @@
                                     <span class="icon-user" style="height: 18px; width: 17px;"></span>Name
                                 </p>
                                 <div class="select-box">
-                                    <input type="text" placeholder="John Doe">
+                                    <input type="text" id="fullname" name="fullname" class="form-control"
+                                        placeholder="John Doe" required="">
                                 </div>
                             </div>
                         </div>
@@ -50,7 +52,8 @@
                                     <span class="icon-phone" style="height: 18px; width: 17px;"></span>Number
                                 </p>
                                 <div class="select-box">
-                                    <input type="text" placeholder="(123) 456-7890">
+                                    <input type="text" id="phone" name="phone" class="form-control"
+                                        placeholder="(123) 456-7890" required="">
                                 </div>
                             </div>
                         </div>
@@ -59,10 +62,12 @@
                         <div class="col-xl-4 col-lg-4 col-md-4">
                             <div class="search-car__input-box">
                                 <p class="search-car__input-title">
-                                    <span class="icon-envelope" style="height: 18px; width: 17px; margin-right: 5px;"></span>Email
+                                    <span class="icon-envelope"
+                                        style="height: 18px; width: 17px; margin-right: 5px;"></span>Email
                                 </p>
                                 <div class="select-box">
-                                    <input type="text" placeholder="example@example.com">
+                                    <input type="text" id="email" name="email" class="form-control"
+                                        placeholder="example@example.com" required="">
                                 </div>
                             </div>
                         </div>
@@ -72,10 +77,10 @@
                         <div class="col-xl-4 col-lg-4 col-md-4">
                             <div class="search-car__input-box">
                                 <p class="search-car__input-title">
-                                    <span class="icon-car" ></span>Car Type
+                                    <span class="icon-car"></span>Car Type
                                 </p>
                                 <div class="select-box">
-                                    <select name="car_type" class="selectmenu wide" required>
+                                    <select name="car_type" id="car_type" class="selectmenu wide" required>
                                         <option selected="selected" value="">Select Car Type</option>
                                         <option value="used">Used car</option>
                                         <option value="new">New Cars</option>
@@ -93,14 +98,8 @@
                                     <span class="icon-pin-2"></span>Pickup Location
                                 </p>
                                 <div class="select-box">
-                                    <select name="pickup_location" class="selectmenu wide" required>
-                                        <option selected="selected" value="">Enter a Location</option>
-                                        <option value="loc_01">Location 01</option>
-                                        <option value="loc_02">Location 02</option>
-                                        <option value="loc_03">Location 03</option>
-                                        <option value="loc_04">Location 04</option>
-                                        <option value="loc_05">Location 05</option>
-                                    </select>
+                                    <input type="text" placeholder="Pickup Location" name="pickup_location"
+                                        id="pickup_location" required>
                                 </div>
                             </div>
                         </div>
@@ -111,7 +110,7 @@
                                 <p class="search-car__input-title">
                                     <span class="icon-date"></span>Pickup Date
                                 </p>
-                                <input type="text" placeholder="mm/dd/yyyy" name="pickup_date" class="hasDatepicker"
+                                <input type="text" placeholder="mm/dd/yyyy" name="date" id="date" class="hasDatepicker"
                                     required>
                             </div>
                         </div>
@@ -122,7 +121,7 @@
                                 <p class="search-car__input-title">
                                     <span class="icon-clock"></span>Pickup Time
                                 </p>
-                                <input type="text" name="pickup_time" placeholder="Choose A Time"
+                                <input type="text" name="time" id="time" placeholder="Choose A Time"
                                     class="hasPtTimeSelect" required>
                             </div>
                         </div>
@@ -134,37 +133,8 @@
                                     <span class="icon-pin-2"></span>Drop-off Location
                                 </p>
                                 <div class="select-box">
-                                    <select name="dropoff_location" class="selectmenu wide" required>
-                                        <option selected="selected" value="">Enter a Location</option>
-                                        <option value="loc_01">Location 01</option>
-                                        <option value="loc_02">Location 02</option>
-                                        <option value="loc_03">Location 03</option>
-                                        <option value="loc_04">Location 04</option>
-                                        <option value="loc_05">Location 05</option>
-                                    </select>
+                                    <input type="text" name="dropoff_location" id="dropoff_location" required />
                                 </div>
-                            </div>
-                        </div>
-
-                        <!-- Drop-off Date -->
-                        <div class="col-xl-4 col-lg-4 col-md-4">
-                            <div class="search-car__input-box">
-                                <p class="search-car__input-title">
-                                    <span class="icon-date"></span>Drop-off Date
-                                </p>
-                                <input type="text" placeholder="mm/dd/yyyy" name="dropoff_date" class="hasDatepicker"
-                                    required>
-                            </div>
-                        </div>
-
-                        <!-- Drop-off Time -->
-                        <div class="col-xl-4 col-lg-4 col-md-4">
-                            <div class="search-car__input-box">
-                                <p class="search-car__input-title">
-                                    <span class="icon-clock"></span>Drop-off Time
-                                </p>
-                                <input type="text" name="dropoff_time" placeholder="Choose A Time"
-                                    class="hasPtTimeSelect" required>
                             </div>
                         </div>
 
@@ -175,7 +145,21 @@
                                     <span class="fas fa-suitcase"></span>Luggage
                                 </p>
                                 <div class="select-box">
-                                    <input type="text" placeholder="No. of Luggage">
+                                    <input type="text" placeholder="No. of Luggage" name="luggage" id="luggage"
+                                        required />
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Passengers -->
+                        <div class="col-xl-4 col-lg-4 col-md-4">
+                            <div class="search-car__input-box">
+                                <p class="search-car__input-title">
+                                    <span class="fas fa-suitcase"></span>Passengers
+                                </p>
+                                <div class="select-box">
+                                    <input type="text" placeholder="No. of Passengers" name="passengers" id="passengers"
+                                        required />
                                 </div>
                             </div>
                         </div>
@@ -187,7 +171,7 @@
                                     <span class="icon-edit"></span>Additional Note
                                 </p>
                                 <div class="select-box">
-                                    <input type="text" placeholder="Your Message ...">
+                                    <input type="text" placeholder="Your Message ..." name="notes" id="notes" />
                                 </div>
                             </div>
                         </div>
@@ -200,9 +184,27 @@
                                 </button>
                             </div>
                         </div>
+
+                        <div style="margin-top: 40px !important">
+                            @if (session('success'))
+                            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                {{ session('success') }}
+                                <button type="button" class="btn-close" data-bs-dismiss="alert"
+                                    aria-label="Close"></button>
+                            </div>
+                            @endif
+
+                            @if (session('error'))
+                            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                {{ session('error') }}
+                                <button type="button" class="btn-close" data-bs-dismiss="alert"
+                                    aria-label="Close"></button>
+                            </div>
+                            @endif
+                        </div>
+
                     </div>
                 </form>
-                <div class="result"></div>
             </div>
         </div>
     </div>

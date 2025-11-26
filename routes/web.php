@@ -1,14 +1,15 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\BookingController;
+use App\Http\Controllers\ContactController;
 
 Route::get('/', function () {
     return view('index');
 });
 
-Route::get('book-online', function () {
-    return view('book');
-})->name('book');
+Route::get('/book-online', [BookingController::class, 'Index'])-> name('book');
+Route::post('/booking', [BookingController::class, 'BookingEmail'])->name('booking.submit');
 
 Route::get('about-us', function () {
     return view('about');

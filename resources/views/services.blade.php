@@ -36,7 +36,7 @@
         </div>
         <div class="row">
             <!-- Why Choose One Single Start -->
-            <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInLeft" data-wow-delay="100ms" data-wow-duration="1500ms">
+            <div class="col-xl-4 col-lg-6 col-md-6">
                 <div class="why-choose-one__single">
                     <div class="why-choose-one__icon">
                         <img src="{{ asset('assets/images/services/airport-transfers.png') }}" alt="">
@@ -55,7 +55,7 @@
             </div>
             <!-- Why Choose One Single End -->
             <!-- Why Choose One Single Start -->
-            <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="300ms" data-wow-duration="1500ms">
+            <div class="col-xl-4 col-lg-6 col-md-6">
                 <div class="why-choose-one__single">
                     <div class="why-choose-one__icon">
                         <img src="{{ asset('assets/images/services/local-taxi-service.png') }}" alt="">
@@ -74,7 +74,7 @@
             </div>
             <!-- Why Choose One Single End -->
             <!-- Why Choose One Single Start -->
-            <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInRight" data-wow-delay="500ms" data-wow-duration="1500ms">
+            <div class="col-xl-4 col-lg-6 col-md-6">
                 <div class="why-choose-one__single">
                     <div class="why-choose-one__icon">
                         <img src="{{ asset('assets/images/services/corporate-travel.png') }}" alt="">
@@ -94,7 +94,7 @@
             </div>
             <!-- Why Choose One Single End -->
             <!-- Why Choose One Single Start -->
-            <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInRight" data-wow-delay="500ms" data-wow-duration="1500ms">
+            <div class="col-xl-4 col-lg-6 col-md-6">
                 <div class="why-choose-one__single">
                     <div class="why-choose-one__icon">
                         <img src="{{ asset('assets/images/services/out-of-town-trips.png') }}" alt="">
@@ -113,7 +113,7 @@
             </div>
             <!-- Why Choose One Single End -->
             <!-- Why Choose One Single Start -->
-            <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInRight" data-wow-delay="500ms" data-wow-duration="1500ms">
+            <div class="col-xl-4 col-lg-6 col-md-6">
                 <div class="why-choose-one__single">
                     <div class="why-choose-one__icon">
                         <img src="{{ asset('assets/images/services/event-transportation.png') }}" alt="">
@@ -132,7 +132,7 @@
             </div>
             <!-- Why Choose One Single End -->
             <!-- Why Choose One Single Start -->
-            <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInRight" data-wow-delay="500ms" data-wow-duration="1500ms">
+            <div class="col-xl-4 col-lg-6 col-md-6">
                 <div class="why-choose-one__single">
                     <div class="why-choose-one__icon">
                         <img src="{{ asset('assets/images/services/door-to-door-service.png') }}" alt="">
@@ -158,7 +158,7 @@
 <!--Call One Start -->
 <section class="call-one">
     <div class="container">
-        <div class="call-one__inner wow fadeInUp" data-wow-delay="300ms" data-wow-duration="1500ms">
+        <div class="call-one__inner">
             <div class="call-one__inner-content">
                 <div class="call-one__bg" style="background-image: url(assets/images/backgrounds/call-one-bg.jpg);">
                 </div>
