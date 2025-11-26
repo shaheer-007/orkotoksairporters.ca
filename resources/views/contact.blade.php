@@ -71,39 +71,60 @@
             <div class="row">
                 <div class="col-xl-6">
                     <div class="contact-page__left">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d40408.530345003775!2d-114.00753338894614!3d50.728599772498654!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x53719832dbd76fe5%3A0x583906fa0929b961!2sOkotoks%2C%20AB%2C%20Canada!5e0!3m2!1sen!2s!4v1764008882651!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="google-map__one"></iframe>
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d40408.530345003775!2d-114.00753338894614!3d50.728599772498654!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x53719832dbd76fe5%3A0x583906fa0929b961!2sOkotoks%2C%20AB%2C%20Canada!5e0!3m2!1sen!2s!4v1764008882651!5m2!1sen!2s"
+                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade" class="google-map__one"></iframe>
                     </div>
                 </div>
                 <div class="col-xl-6">
                     <div class="contact-page__right">
-                        <h3 class="contact-page__form-title">Get A Free Quote</h3>
+                        <div style="margin-bottom: 40px !important">
+                            @if (session('success'))
+                            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                <strong>Success!</strong> {{ session('success') }}
+                                <button type="button" class="btn-close" data-bs-dismiss="alert"
+                                    aria-label="Close"></button>
+                            </div>
+                            @endif
+
+                            @if (session('error'))
+                            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                <strong>Error!</strong> {{ session('error') }}
+                                <button type="button" class="btn-close" data-bs-dismiss="alert"
+                                    aria-label="Close"></button>
+                            </div>
+                            @endif
+                        </div>
+                        <h3 class="contact-page__form-title">Share You Query</h3>
                         <form id="contact-form" class="contact-form-validated contact-page__form"
-                            action="https://dreamlayout.mnsithub.com/html/gorent/main-html/assets/mail.php"
-                            method="POST">
+                            action="{{ route('contact.submit') }}" method="POST">
+                            @csrf
                             <div class="row">
                                 <div class="col-xl-6 col-lg-6 col-md-6">
                                     <div class="contact-page__input-box">
-                                        <input type="text" name="name" placeholder="Your name" required="">
+                                        <input type="text" name="name" placeholder="Your name" id="name" required="">
                                     </div>
                                 </div>
                                 <div class="col-xl-6 col-lg-6 col-md-6">
                                     <div class="contact-page__input-box">
-                                        <input type="email" name="email" placeholder="Your Email" required="">
+                                        <input type="email" name="email" placeholder="Your Email" id="email"
+                                            required="">
                                     </div>
                                 </div>
                                 <div class="col-xl-6 col-lg-6 col-md-6">
                                     <div class="contact-page__input-box">
-                                        <input type="text" placeholder="Mobile" name="number">
+                                        <input type="text" placeholder="Mobile" name="number" id="number">
                                     </div>
                                 </div>
                                 <div class="col-xl-6 col-lg-6 col-md-6">
                                     <div class="contact-page__input-box">
-                                        <input type="text" placeholder="Subject" name="subject">
+                                        <input type="text" placeholder="Subject" name="subject" id="subject">
                                     </div>
                                 </div>
                                 <div class="col-xl-12">
                                     <div class="contact-page__input-box text-message-box">
-                                        <textarea name="message" placeholder="Messege"></textarea>
+                                        <textarea name="message" placeholder="Messege" id="message"></textarea>
                                     </div>
                                     <div class="contact-page__btn-box">
                                         <button type="submit" class="thm-btn contact-page__btn"
@@ -115,7 +136,6 @@
                                 </div>
                             </div>
                         </form>
-                        <p class="ajax-response mb-0"></p>
                     </div>
                 </div>
             </div>

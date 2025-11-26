@@ -25,11 +25,8 @@
     <div class="why-choose-one__shape-1"></div>
     <div class="why-choose-one__shape-2"></div>
     <div class="container">
-        <div class="section-title text-center sec-title-animation animation-style2">
+        <div class="section-title text-center">
             <div class="section-title__tagline-box justify-content-center">
-                <div class="section-title__tagline-shape">
-                    <img src="assets/images/shapes/section-title-tagline-shape-1.png" alt="">
-                </div>
                 <span class="section-title__tagline">Our Services</span>
             </div>
             <h2 class="section-title__title">Services We <br>Provide</h2>

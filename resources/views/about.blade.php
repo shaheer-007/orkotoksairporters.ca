@@ -30,22 +30,22 @@
                 <div class="about-one__left wow slideInLeft" data-wow-delay="100ms" data-wow-duration="2500ms">
                     <div class="about-one__img-box">
                         <div class="about-one__img">
-                            <img src="assets/images/resources/about-one-img-1.png" alt="">
+                            <img src="{{ asset('assets/images/resources/about-one-img-1.png') }}" alt="">
                         </div>
                         <div class="about-one__shape-2 float-bob-y">
-                            <img src="assets/images/shapes/about-one-shape-2.png" alt="">
+                            <img src="{{ asset('assets/images/shapes/about-one-shape-2.png') }}" alt="">
                         </div>
                         <div class="about-one__shape-1">
-                            <img src="assets/images/shapes/about-one-shape-1.png" alt="">
+                            <img src="{{ asset('assets/images/shapes/about-one-shape-1.png') }}" alt="">
                         </div>
                         <div class="about-one__shape-4 float-bob-x">
-                            <img src="assets/images/shapes/about-one-shape-4.png" alt="">
+                            <img src="{{ asset('assets/images/shapes/about-one-shape-4.png') }}" alt="">
                         </div>
                         <div class="about-one__shape-3 float-bob-x">
-                            <img src="assets/images/shapes/about-one-shape-3.png" alt="">
+                            <img src="{{ asset('assets/images/shapes/about-one-shape-3.png') }}" alt="">
                         </div>
                         <div class="about-one__img-2">
-                            <img src="assets/images/resources/about-one-img-2.png" alt="">
+                            <img src="{{ asset('assets/images/resources/about-one-img-2.png') }}" alt="">
                         </div>
                         <div class="about-one__experience">
                             <div class="about-one__experience-count">
@@ -275,9 +275,6 @@
     <div class="container">
         <div class="section-title text-left sec-title-animation animation-style2">
             <div class="section-title__tagline-box">
-                <div class="section-title__tagline-shape">
-                    <img src="assets/images/shapes/section-title-tagline-shape-1.png" alt="">
-                </div>
                 <span class="section-title__tagline">Our Testimonial</span>
             </div>
             <h2 class="section-title__title title-animation">What Peoples Say <br> about Orkotoks Airporter</h2>

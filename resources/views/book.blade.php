@@ -26,8 +26,23 @@
     <div class="container">
         <div class="search-car__inner">
             <div class="search-car__form-box">
-                <form class="contact-form-validated search-car__form" action="{{ route('booking.submit') }}"
-                    method="post">
+                <div style="margin-bottom: 40px !important">
+                    @if (session('success'))
+                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                        <strong>Success!</strong> {{ session('success') }}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                    @endif
+
+                    @if (session('error'))
+                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        <strong>Error!</strong> {{ session('error') }}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                    @endif
+                </div>
+                <form class="contact-form-validated search-car__form booking-form"
+                    action="{{ route('booking.submit') }}" method="post">
                     @csrf
 
                     <div class="row">
@@ -82,10 +97,9 @@
                                 <div class="select-box">
                                     <select name="car_type" id="car_type" class="selectmenu wide" required>
                                         <option selected="selected" value="">Select Car Type</option>
-                                        <option value="used">Used car</option>
-                                        <option value="new">New Cars</option>
-                                        <option value="sports">Sports Cars</option>
-                                        <option value="luxury">Luxury Sedans</option>
+                                        <option value="sedan">Sedan</option>
+                                        <option value="suv">SUV</option>
+                                        <option value="van">Van</option>
                                     </select>
                                 </div>
                             </div>
@@ -133,7 +147,7 @@
                                     <span class="icon-pin-2"></span>Drop-off Location
                                 </p>
                                 <div class="select-box">
-                                    <input type="text" name="dropoff_location" id="dropoff_location" required />
+                                    <input type="text" placeholder="Drop-off Location" name="dropoff_location" id="dropoff_location" required />
                                 </div>
                             </div>
                         </div>
@@ -155,7 +169,7 @@
                         <div class="col-xl-4 col-lg-4 col-md-4">
                             <div class="search-car__input-box">
                                 <p class="search-car__input-title">
-                                    <span class="fas fa-suitcase"></span>Passengers
+                                    <span class="fas fa-users"></span>Passengers
                                 </p>
                                 <div class="select-box">
                                     <input type="text" placeholder="No. of Passengers" name="passengers" id="passengers"
@@ -184,25 +198,6 @@
                                 </button>
                             </div>
                         </div>
-
-                        <div style="margin-top: 40px !important">
-                            @if (session('success'))
-                            <div class="alert alert-success alert-dismissible fade show" role="alert">
-                                {{ session('success') }}
-                                <button type="button" class="btn-close" data-bs-dismiss="alert"
-                                    aria-label="Close"></button>
-                            </div>
-                            @endif
-
-                            @if (session('error'))
-                            <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                                {{ session('error') }}
-                                <button type="button" class="btn-close" data-bs-dismiss="alert"
-                                    aria-label="Close"></button>
-                            </div>
-                            @endif
-                        </div>
-
                     </div>
                 </form>
             </div>

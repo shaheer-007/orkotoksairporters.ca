@@ -28,7 +28,7 @@
                         <table border="0" cellpadding="0" cellspacing="0" width="100%" style="border-collapse: collapse;">
                             <tr>
                                 <td style="color: #153643; font-family: Arial, sans-serif;">
-                                    <h1 style="font-size: 24px; margin: 0;">Booking Details:</h1>
+                                    <h1 style="font-size: 24px; margin: 0;">Contact Details:</h1>
                                 </td>
                             </tr>
                             <tr>
@@ -39,21 +39,9 @@
                                     <hr>
                                     <p style="margin: 0;"><span style="color: #153643;"><b>Phone:</b></span> {{ $data['number'] }}</p>
                                     <hr>
-                                    <p style="margin: 0;"><span style="color: #153643;"><b>Pickup Location:</b></span> {{ $data['pickup'] }}</p>
+                                    <p style="margin: 0;"><span style="color: #153643;"><b>Subject:</b></span> {{ $data['subject'] }}</p>
                                     <hr>
-                                    <p style="margin: 0;"><span style="color: #153643;"><b>Car Type:</b></span> {{ $data['car_type'] }}</p>
-                                    <hr>
-                                    <p style="margin: 0;"><span style="color: #153643;"><b>Date:</b></span> {{ $data['date'] }}</p>
-                                    <hr>
-                                    <p style="margin: 0;"><span style="color: #153643;"><b>Time:</b></span> {{ $data['time'] }}</p>
-                                    <hr>
-                                    <p style="margin: 0;"><span style="color: #153643;"><b>Dropoff Location:</b></span> {{ $data['dropoff'] }}</p>
-                                    <hr>
-                                    <p style="margin: 0;"><span style="color: #153643;"><b>Passengers:</b></span> {{ $data['passenger'] }}</p>
-                                    <hr>
-                                    <p style="margin: 0;"><span style="color: #153643;"><b>Luggage:</b></span> {{ $data['luggage'] }}</p>
-                                    <hr>
-                                    <p style="margin: 0;"><span style="color: #153643;"><b>Additional Notes:</b></span> {{ $data['message'] }}</p>
+                                    <p style="margin: 0;"><span style="color: #153643;"><b>Message:</b></span> {{ $data['message'] }}</p>
                                 </td>
                             </tr>
                         </table>

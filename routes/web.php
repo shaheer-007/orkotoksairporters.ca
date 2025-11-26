@@ -23,6 +23,5 @@ Route::get('our-services', function () {
     return view('services');
 })->name('services');
 
-Route::get('contact-us', function () {
-    return view('contact');
-})->name('contact');
+Route::get('/contact-us', [ContactController::class, 'Index'])-> name('contact');
+Route::post('/contact', [ContactController::class, 'ContactEmail'])->name('contact.submit');

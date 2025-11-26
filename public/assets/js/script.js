@@ -648,7 +648,7 @@
           elm.val(Math.ceil(this.value)).trigger('change');
         }
       });
-      $(this).append(function () {});
+      $(this).append(function () { });
     }, {
       accY: 20
     });
@@ -833,8 +833,8 @@
         var percent = el.data("percent");
         $(el).css("width", percent).addClass("counted");
       }, {
-        accY: -50
-      }
+      accY: -50
+    }
     );
   }
 
@@ -847,8 +847,8 @@
           $(this).css("width", progressWidth + "%");
         });
       }, {
-        accY: 0
-      }
+      accY: 0
+    }
     );
   }
 
@@ -878,8 +878,8 @@
           });
         }
       }, {
-        accY: 0
-      }
+      accY: 0
+    }
     );
   }
 
@@ -917,43 +917,6 @@
 
 
 
-  if ($(".contact-form-validated").length) {
-    $(".contact-form-validated").each(function () {
-      let self = $(this);
-      self.validate({
-        // initialize the plugin
-        rules: {
-          name: {
-            required: true
-          },
-          email: {
-            required: true,
-            email: true
-          },
-          message: {
-            required: true
-          },
-          subject: {
-            required: true
-          }
-        },
-        submitHandler: function (form) {
-          // sending value with ajax request
-          $.post(
-            $(form).attr("action"),
-            $(form).serialize(),
-            function (response) {
-              $(form).parent().find(".result").append(response);
-              $(form).find('input[type="text"]').val("");
-              $(form).find('input[type="email"]').val("");
-              $(form).find("textarea").val("");
-            }
-          );
-          return false;
-        }
-      });
-    });
-  }
 
   // mailchimp form
   if ($(".mc-form").length) {
@@ -1227,8 +1190,8 @@
         $("html, body")
           .stop()
           .animate({
-              scrollTop: $(target.attr("href")).offset().top - headerH + "px"
-            },
+            scrollTop: $(target.attr("href")).offset().top - headerH + "px"
+          },
             200,
             "easeInOutExpo"
           );
@@ -1403,8 +1366,8 @@
     if ($(this).next().val() > 1) {
       if ($(this).next().val() > 1)
         $(this)
-        .next()
-        .val(+$(this).next().val() - 1);
+          .next()
+          .val(+$(this).next().val() - 1);
     }
   });
 
@@ -1746,3 +1709,33 @@
 
 
 })(jQuery);
+
+
+// Add this JavaScript to handle button loading state
+document.addEventListener('DOMContentLoaded', function () {
+  const bookingForm = document.querySelector('.booking-form');
+  const submitBtn = bookingForm.querySelector('button[type="submit"]');
+  const originalBtnText = submitBtn.innerHTML;
+
+  if (bookingForm && submitBtn) {
+    bookingForm.addEventListener('submit', function (e) {
+      // Change button text and add loader
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = `
+        <span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
+        Booking...
+      `;
+      submitBtn.classList.add('disabled');
+    });
+  }
+});
+
+document.getElementById('contact-form').addEventListener('submit', function (e) {
+  const submitBtn = this.querySelector('button[type="submit"]');
+  const textSpan = submitBtn.querySelector('.thm-btn-text');
+  const iconBox = submitBtn.querySelector('.thm-btn-icon-box');
+
+  submitBtn.disabled = true;
+  textSpan.textContent = 'Submitting...';
+  iconBox.innerHTML = '<i class="fas fa-spinner fa-spin"></i>';
+});
