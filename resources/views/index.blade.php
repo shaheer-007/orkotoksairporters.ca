@@ -124,7 +124,7 @@
         </div>
         <div class="row">
             <!--Services One Single Start-->
-            <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInLeft" data-wow-delay="100ms" data-wow-duration="1500ms">
+            <div class="col-xl-3 col-lg-6 col-md-6">
                 <div class="services-one__single">
                     <div class="services-one__single-shape-1"></div>
                     <div class="services-one__single-shape-2"></div>
@@ -140,7 +140,7 @@
             </div>
             <!--Services One Single End-->
             <!--Services One Single Start-->
-            <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInLeft" data-wow-delay="300ms" data-wow-duration="1500ms">
+            <div class="col-xl-3 col-lg-6 col-md-6">
                 <div class="services-one__single">
                     <div class="services-one__single-shape-1"></div>
                     <div class="services-one__single-shape-2"></div>
@@ -156,7 +156,7 @@
             </div>
             <!--Services One Single End-->
             <!--Services One Single Start-->
-            <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInRight" data-wow-delay="500ms" data-wow-duration="1500ms">
+            <div class="col-xl-3 col-lg-6 col-md-6">
                 <div class="services-one__single">
                     <div class="services-one__single-shape-1"></div>
                     <div class="services-one__single-shape-2"></div>
@@ -171,7 +171,7 @@
             </div>
             <!--Services One Single End-->
             <!--Services One Single Start-->
-            <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInRight" data-wow-delay="700ms" data-wow-duration="1500ms">
+            <div class="col-xl-3 col-lg-6 col-md-6">
                 <div class="services-one__single">
                     <div class="services-one__single-shape-1"></div>
                     <div class="services-one__single-shape-2"></div>
